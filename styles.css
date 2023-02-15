@@ -1,0 +1,57 @@
+#header {
+    /* height: 80px; */
+    border-bottom: 1px solid black;
+}
+
+#header img {
+    /* width: 10%; */
+    max-width: 15%;
+    height: auto;
+}
+
+.banner {
+    width: 75%;
+}
+
+#footer {
+    color: white;
+    background-color: #191919;
+}
+
+#footer p {
+    margin-bottom: 0;
+}
+
+.footer-heading {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+#myVideo {
+    position: fixed;
+    /* right: 0; */
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.video-overlay {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Link de la licencia */
+a[rel="license"] {
+    color: white;
+}

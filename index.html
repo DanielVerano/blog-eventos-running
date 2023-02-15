@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperial Event Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-light text-dark">
+    <!-- Header -->
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-lg d-flex align-items-center justify-content-between">
+            <img class="img-fluid" src="./img/logo.svg" alt="Logo Imperial">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#formulario">Login
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./registro.html">Registro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html">Entradas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="bi bi-plus-circle"></i> Crear nueva entrada</a>
+                            </li>
+                        </ul>
+                        <a href="#">
+                            <i class="bi bi-search" data-bs-toggle="collapse" data-bs-target="#busqueda"></i></a>
+                        <div class="collapse" id="busqueda">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search">
+                                <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse"
+                                    data-bs-target="#busqueda"></button>
+                            </form>
+                        </div>
+                        <!-- Light Switch -->
+                        <div class="form-check form-switch mx-2">
+                            <label class="form-check-label" for="lightSwitch"
+                                aria-label="Intercambiador de color"></label>
+                            <input class="form-check-input" type="checkbox" id="lightSwitch">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="formulario" tabindex="-1" aria-labelledby="formulario" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" id="usuario">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="contrasena">
+                            <div class="form-text"><a href="#">Restaurar contraseña</a></div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="mantenerSesion">
+                            <label class="form-check-label" for="mantenerSesion">Mantener la sesión abierta</label>
+                        </div>
+                    </form>
+                    <!-- Formulario End -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-lg-8">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">Entradas</li>
+                    </ol>
+                </nav>
+                <!-- Breadcrumb End -->
+
+                <!-- Entradas -->
+                <div class="card text-bg-light mb-3" role="article">
+                    <img class="img-fluid card-img-top" src="./img/running1.jpg" alt="Running1">
+                    <div class="card-body">
+                        <h5 class="card-title">Entrada 1</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                            voluptatibus officiis quae natus repellat expedita, tempore cupiditate blanditiis quam sunt
+                            ab vitae culpa dolor cumque quia dolore eligendi doloribus esse!</p>
+                        <div class="row justify-content-between">
+                            <div class="col-auto">
+                                <div class="card-text"><small>Categoría: Experiencias</small></div>
+                                <div class="card-text"><small>Etiquetas: running, eventos</small>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="card-text"><small>Visualizaciones: 14</small></div>
+                                <div class="card-text"><small>Comentarios: 0</small>
+                                </div>
+                                <div class="card-text"><small>Me gusta: 3</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-light mb-3" role="article">
+                    <img class="img-fluid card-img-top" src="./img/running2.jpg" alt="Running2">
+                    <div class="card-body">
+                        <h5 class="card-title">Entrada 2</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                            voluptatibus officiis quae natus repellat expedita, tempore cupiditate blanditiis quam sunt
+                            ab vitae culpa dolor cumque quia dolore eligendi doloribus esse!</p>
+                        <div class="row justify-content-between">
+                            <div class="col-auto">
+                                <div class="card-text"><small>Categoría: Competición</small></div>
+                                <div class="card-text"><small>Etiquetas: running, eventos,
+                                        competición</small>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="card-text"><small>Visualizaciones: 23</small></div>
+                                <div class="card-text"><small>Comentarios: 2</small>
+                                </div>
+                                <div class="card-text"><small>Me gusta: 7</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Entradas End -->
+
+                <!-- Paginacion -->
+                <nav aria-label="Paginacion" data-bs-theme="light">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Anterior">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Siguiente">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Paginacion End -->
+
+            </div>
+            <div class="col-lg-4">
+                <aside class="text-center my-3"><img class="banner img-fluid" src="./img/black-friday-banner.PNG"
+                        alt="Black Friday Banner">
+                </aside>
+                <aside class="my-3">
+                    <div class="row"><em class="text-center">Síguenos en nuestras redes sociales!</em></div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <a href="https://facebook.com" class="facebook" aria-label="Facebook"><i
+                                    class="bi bi-facebook"></i></a>
+                        </div>
+                        <div class="col-auto"><a href="https://twitter.com" class="twitter" aria-label="Twitter"><i
+                                    class="bi bi-twitter"></i></a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://instagram.com" class="instagram" aria-label="Instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="row justify-content-center">Entradas destacadas:</div>
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/running1.jpg" class="d-block w-100 rounded" alt="Imagen Carousel 1">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                                    <h5>Entrada 1</h5>
+                                    <p class="text-truncate">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                        Voluptates sed illo
+                                        eaque quaerat, corrupti, nam molestias harum quidem quam, sunt quod recusandae
+                                        excepturi. Provident quis, consequuntur maiores rerum dolorum facere.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/running2.jpg" class="d-block w-100 rounded" alt="Imagen Carousel 2">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                                    <h5>Entrada 2</h5>
+                                    <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Voluptates sed illo
+                                        eaque quaerat, corrupti, nam molestias harum quidem quam, sunt quod recusandae
+                                        excepturi. Provident quis, consequuntur maiores rerum dolorum facere.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row py-3">
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Imperial Event Planner</h5>
+                    <p>Avenida de la Unidad, 5</p>
+                    <p>Castilleja de la Cuesta, Sevilla</p>
+                    <p>41950</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="footer-heading">Secciones</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="login.html"><i class="bi bi-chevron-right"></i> Login</a></li>
+                        <li><a href="registro.html"><i class="bi bi-chevron-right"></i> Registro</a></li>
+                        <li><a href="entradas.html"><i class="bi bi-chevron-right"></i> Entradas</a></li>
+                        <li><a href="nueva-entrada.html"><i class="bi bi-chevron-right"></i> Crear nueva entrada</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="footer-heading">Etiquetas</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li>Running</li>
+                        <li>Deportes</li>
+                        <li>Maratón</li>
+                        <li>Eventos</li>
+                        <li>Competición</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Categorías</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li>Running</li>
+                        <li>Maratón</li>
+                        <li>Competición</li>
+                        <li>Experiencias</li>
+                        <li>Viajes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row justify-content-center py-3">
+                <div class="col-lg-4">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        <img alt="Licencia Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+                </div>
+                <div class="col-lg-8">Esta obra está bajo
+                    una
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative
+                        Commons
+                        Atribución-NoComercial-CompartirIgual 4.0 Internacional <abbr
+                            title="Reconocimiento-No Comercial-Compartir Igual">(BY-NC-SA)</abbr></a>.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="video" class="show">
+        <video controls autoplay muted loop id="myVideo" class="multi-collapse">
+            <source src="./videos/running.mp4" type="video/mp4">
+        </video>
+        <div id="video-overlay" class="video-overlay multi-collapse" data-bs-theme="dark">
+            <h1>Imperial Event Planner</h1>
+            <p>La mejor página sobre eventos de running.</p>
+            <button id="cerrarVideo" type="button" class="btn-close" aria-label="Close" data-bs-target="#video"
+                data-bs-toggle="collapse"></button>
+        </div>
+    </div>
+
+    <script src="./switch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
